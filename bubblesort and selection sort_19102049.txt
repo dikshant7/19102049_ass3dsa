@@ -1,0 +1,38 @@
+void selectionSort(int arr[],int n)
+{
+    for(int i=0;i<n;i++)
+    {
+        int mini=i;
+        for(int j=i+1;j<n;j++)
+        {
+            if(arr[j]<arr[mini])
+            {
+                mini=j;
+            }
+        }
+       int temp=arr[mini];
+       arr[mini]=arr[i];
+       arr[i]=temp;
+    }
+}
+void bubblesort(int arr[],int n)
+{
+    for(int j=0;j<n;j++)
+    {
+        for(int i=0;i<n-1;i++)
+        {
+            if(arr[i]>arr[i+1])
+            {
+                swap(arr[i],arr[i+1]);
+            }
+        }
+    }
+}
+1)number of comparison in worst case
+a)selection sort-(n)*(n-1)/2
+b)bubble sort-(n)*(n-1)/2
+
+
+2)number of swaps in worst case
+a)selection sort-(n-1)
+b)bubble sort-(n)*(n-1)/2

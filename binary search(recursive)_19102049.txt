@@ -1,0 +1,21 @@
+// recursive code to do binary search in array "arr" for element k
+ int rec(int arr[],int k,int start,int end)
+  {
+      if(start>end)
+      {
+          return -1;
+      }
+      int mid=(start+end)/2;
+      if(arr[mid]==k)
+      {
+          return mid;
+      }
+     else if(arr[mid]>k)
+      {
+          return rec(arr,k,start,mid-1);
+      }
+      else{
+          return rec(arr,k,mid+1,end);
+      }
+      
+  }
